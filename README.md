@@ -43,6 +43,36 @@ For building and benchmarking instructions [Building & Benchmarking TidesDB](htt
 
 For C usage documentation, see the [TidesDB C Reference](https://tidesdb.com/reference/c/)
 
+## Building Locally
+
+TidesDB uses CMake. On a clean checkout:
+
+```bash
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Debug
+make -j$(nproc)
+```
+
+Run the test suite:
+
+```bash
+./tidesdb_tests
+```
+
+Run benchmarks:
+
+```bash
+./tidesdb_bench
+```
+
+Before submitting changes, format your code:
+
+```bash
+./code_formatter.sh
+```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full contribution guidelines.
+
 ## Discord Community
 Join the [TidesDB Discord Community](https://discord.gg/tWEmjR66cy) to ask questions, work on development, and discuss the future of TidesDB.
 
