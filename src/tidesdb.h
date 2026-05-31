@@ -439,7 +439,14 @@ typedef struct tidesdb_comparator_entry_t
 /**
  * tidesdb_config_t
  * configuration for the database
- * @param db_path path to the database
+ *
+ * required fields:
+ *   - db_path: must be set to a valid directory path before calling tidesdb_open()
+ *
+ * optional fields — defaults are set by tidesdb_default_config():
+ *   - num_flush_threads: number of flush threads (default 2)
+ *   - num_compaction_threads: number of compaction threads (default 2)
+ *   - log_level: minimum log level to display (default TDB_LOG_INFO)
  * @param num_flush_threads number of flush threads
  * @param num_compaction_threads number of compaction threads
  * @param log_level minimum log level to display (TDB_LOG_DEBUG, TDB_LOG_INFO, TDB_LOG_WARN,
