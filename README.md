@@ -1,3 +1,4 @@
+[![CI](https://github.com/Arvuno/tidesdb/actions/workflows/ci.yml/badge.svg)](https://github.com/Arvuno/tidesdb/actions)
 <div>
     <h1 align="left"><img width="108" src="artwork/tidesdb-logo-v8.png"></h1>
 </div>
